@@ -37,9 +37,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
 # 配置默认放置App的目录
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
 ADD . /app
+WORKDIR /app
+RUN chmod 755 ./start.sh
 
 EXPOSE 80
-WORKDIR /app
-CMD ["start.sh"]
+CMD ["./start.sh"]
 
 
