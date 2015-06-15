@@ -40,6 +40,6 @@ ADD . /app
 
 EXPOSE 80
 WORKDIR /app
-CMD ["/start.sh"]
+CMD ["start.sh"]
 
 
