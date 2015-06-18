@@ -8,6 +8,7 @@ MAINTAINER Captain Dao (support@daocloud.io)
 RUN apt-get update && \
 	DEBIAN_FRONTEND=noninteractive apt-get -yq install \
 		curl \
+		wget \
 	    apache2 \
 	    libapache2-mod-php5 \
 	    php5-mysql \
